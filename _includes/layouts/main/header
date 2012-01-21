@@ -1,0 +1,7 @@
+		<div class="row">
+			<div class="twelve columns">
+				<h2>{{ page.title }}</h2>
+				<p>{{ page.aside }}</p>
+				<hr />
+			</div>
+		</div>

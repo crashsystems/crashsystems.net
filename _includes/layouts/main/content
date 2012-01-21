@@ -1,0 +1,4 @@
+<div class="eight columns">
+				{{ content }}
+
+			</div>
