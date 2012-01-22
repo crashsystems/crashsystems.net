@@ -1,0 +1,16 @@
+
+	<!-- Footer bar -->
+	<div class="row">
+		<div class="container" id="footerBar">
+			<p><span id="copyleft">&copy;</span> 
+			Douglass Clem, some rights reserved. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a></p>
+		</div>
+	</div>
+
+
+	<!-- Included JS Files -->
+	<script src="assets/js/foundation.js"></script>
+	<script src="assets/js/app.js"></script>
+
+</body>
+</html>

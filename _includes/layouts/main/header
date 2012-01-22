@@ -1,7 +1,27 @@
+		<!-- Title bar -->
+		<div class="row">
+			<div class="container"  id="titleBar">
+				<h5>crashsystems.net</h5>
+			</div>
+		</div>
+		
 		<div class="row">
 			<div class="twelve columns">
-				<h2>{{ page.title }}</h2>
-				<p>{{ page.aside }}</p>
+				<ul class="nav-bar">
+					<li><a href="#">Home</a></li>
+					<li class="has-flyout"><a href="#">Blog</a>
+						<div class="flyout small panel">
+							<h5><a href="#">Archives</a></h5>
+							<h5><a href="$">Another submenu</a></h5>
+						</div>
+					</li>
+					<li><a href="#">Research</a></li>
+					<li><a href="#">About me</li></a></li>
+				</ul>
+				
+				<h1><strong>{{ page.title }}</strong></h1>
+				<p><em>{{ page.aside }}</em></p>
+				
 				<hr />
 			</div>
 		</div>

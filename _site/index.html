@@ -11,7 +11,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width" />
 
-	<title>crashsystems.net</title>
+	<title>A page title</title>
   
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="assets/css/foundation.css">
@@ -33,17 +33,37 @@
 	<!-- container -->
 	<div class="container">
 
+		<!-- Title bar -->
+		<div class="row">
+			<div class="container"  id="titleBar">
+				<h5>crashsystems.net</h5>
+			</div>
+		</div>
+		
 		<div class="row">
 			<div class="twelve columns">
-				<h2>crashsystems.net</h2>
-				<p>Best site in the internets!</p>
+				<ul class="nav-bar">
+					<li><a href="#">Home</a></li>
+					<li class="has-flyout"><a href="#">Blog</a>
+						<div class="flyout small panel">
+							<h5><a href="#">Archives</a></h5>
+							<h5><a href="$">Another submenu</a></h5>
+						</div>
+					</li>
+					<li><a href="#">Research</a></li>
+					<li><a href="#">About me</li></a></li>
+				</ul>
+				
+				<h1><strong>A page title</strong></h1>
+				<p><em>Shocking headline to generate interest!</em></p>
+				
 				<hr />
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="eight columns">
-				<h1 id='shiny_content'>Shiny content</h1>
+				<h2 id='shiny_content'>Shiny content</h2>
 
 <p>TDIY consectetur mixtape +1, sunt esse irony blog aliqua wes anderson ut enim vinyl american apparel deserunt. Nisi officia duis commodo cardigan do. Echo park jean shorts occaecat, esse brunch banksy marfa veniam helvetica laboris in nihil dolore. Tumblr leggings hoodie, nihil irure proident fixie seitan keffiyeh photo booth craft beer. Duis exercitation gentrify, DIY butcher ethical terry richardson. Sapiente consectetur keffiyeh reprehenderit pitchfork keytar aute skateboard. Vegan irony wes anderson magna est.</p>
 
@@ -58,19 +78,19 @@
 			<div class="four columns">			
 				<h4>A little blurb</h4>
 				<p>Organic freegan messenger bag whatever marfa, ethical mixtape. Cliche tofu portland mlkshk, messenger bag terry richardson butcher vice. Skateboard artisan cosby sweater iphone, stumptown readymade cred. Gentrify stumptown freegan, carles cliche whatever lomo scenester aesthetic.</p>
-
-				<h4>Nav links</h4>
-				<a href="#" class="[radius, round] button">Blog</a><br><br>
-				<a href="#" class="[radius, round] button">About Me</a><br><br>
-				<a href="#" class="[radius, round] button">Research</a><br><br>
-				<a href="#" class="[radius, round] button">Other stuff</a><br><br>
 			</div>
 		</div>
 
 	</div>
 	<!-- container -->
 
-
+	<!-- Footer bar -->
+	<div class="row">
+		<div class="container" id="footerBar">
+			<p><span id="copyleft">&copy;</span> 
+			Douglass Clem, some rights reserved. <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a></p>
+		</div>
+	</div>
 
 
 	<!-- Included JS Files -->

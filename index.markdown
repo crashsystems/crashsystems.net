@@ -1,11 +1,11 @@
 ---
 layout: main
-title: crashsystems.net
-aside: Best site in the internets!
+title: A page title
+aside: Shocking headline to generate interest!
 ---
 
 
-#Shiny content
+##Shiny content
 
 TDIY consectetur mixtape +1, sunt esse irony blog aliqua wes anderson ut enim vinyl american apparel deserunt. Nisi officia duis commodo cardigan do. Echo park jean shorts occaecat, esse brunch banksy marfa veniam helvetica laboris in nihil dolore. Tumblr leggings hoodie, nihil irure proident fixie seitan keffiyeh photo booth craft beer. Duis exercitation gentrify, DIY butcher ethical terry richardson. Sapiente consectetur keffiyeh reprehenderit pitchfork keytar aute skateboard. Vegan irony wes anderson magna est.
 

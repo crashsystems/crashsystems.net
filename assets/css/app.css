@@ -13,7 +13,25 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+#titleBar {
+  background: #222222;
+  border-bottom: solid 4px #00a5ff;
+  padding: 15px 20px 13px 20px; }
+#titleBar h5 {
+  color: #fff; font-weight: bold; }
 
+#footerBar {
+  background: #222222;
+  border-top: solid 4px #00a5ff;
+  padding: 15px 20px 1px 20px; }
+#footerBar p {
+  color: #fff;}
+
+#copyleft {
+	transform:rotate(180deg);-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);-o-transform:rotate(180deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2); display: inline-block;
+}
 
 
 /* -----------------------------------------
