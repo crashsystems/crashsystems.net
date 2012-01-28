@@ -14,11 +14,11 @@
 	<title>{{ page.title }}</title>
   
 	<!-- Included CSS Files -->
-	<link rel="stylesheet" href="assets/css/foundation.css">
-	<link rel="stylesheet" href="assets/css/app.css">
+	<link rel="stylesheet" href="{{ site.url }}assets/css/foundation.css">
+	<link rel="stylesheet" href="{{ site.url }}assets/css/app.css">
 
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="assets/css/ie.css">
+		<link rel="stylesheet" href="{{ site.url }}assets/css/ie.css">
 	<![endif]-->
 
 
