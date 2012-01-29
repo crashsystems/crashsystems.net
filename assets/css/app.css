@@ -23,7 +23,7 @@ div.row {
      background-image:url('../img/bg.jpg');
      background-attachment:fixed;
   }
-  div.row p, H1, H1, H3, H4 {
+  div.row p, H1, H1, H3, H4, ul {
     padding-left: 10px;
   }
   div.row {

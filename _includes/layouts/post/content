@@ -1,0 +1,11 @@
+<div class="eight columns">
+				<dl class="nice contained tabs">
+					<dd><a href="#content" class="active">Post</a></dd>
+					<dd><a href="#comments">Comments</a></dd>
+				</dl>
+
+				<ul class="nice tabs-content">
+					<li class="active" id="contentTab">{{ content }}</li>
+					<li id="commentsTab">Comment code goes here</li>
+				</ul>
+</div>
