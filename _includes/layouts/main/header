@@ -1,6 +1,6 @@
 		<!-- Title bar -->
 		<div class="row">
-			<div class="container"  id="titleBar">
+			<div class="container" id="titleBar">
 				<h5>crashsystems.net</h5>
 			</div>
 		</div>

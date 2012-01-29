@@ -13,6 +13,26 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+div.row {
+   background:white;
+}
+
+
+@media screen and (min-width: 769px) {
+  body {
+     background-image:url('../img/bg.jpg');
+     background-attachment:fixed;
+  }
+  div.row p, H1, H1, H3, H4 {
+    padding-left: 10px;
+  }
+  div.row {
+  	-moz-box-shadow: -10px 10px 5px #888;
+	-webkit-box-shadow: -10px 10px 5px #888;
+	box-shadow: -10px 10px 5px #888;
+  }
+}
+
 #titleBar {
   background: #222222;
   border-bottom: solid 4px #00a5ff;
