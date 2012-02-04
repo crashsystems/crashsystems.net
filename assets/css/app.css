@@ -17,8 +17,19 @@ div.row {
    background:white;
 }
 
+body {
+	font-family: 'Open Sans', sans-serif;
+}
 
-@media screen and (min-width: 769px) {
+h1, h2, h3, h4, h5 {
+	font-family: 'Oswald', sans-serif;
+}
+
+p {
+	color: #181818;
+}
+
+@media screen and (min-width: 981px) {
   body {
      background-image:url('../img/bg.jpg');
      background-attachment:fixed;
