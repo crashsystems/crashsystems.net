@@ -8,15 +8,14 @@
 		<div class="row">
 			<div class="twelve columns">
 				<ul class="nav-bar">
-					<li><a href="#">Home</a></li>
-					<li class="has-flyout"><a href="#">Blog</a>
+					<li class="has-flyout"><a href="/">Blog</a>
 						<div class="flyout small panel">
-							<h5><a href="#">Archives</a></h5>
+							<h5><a href="/archive.html">Archives</a></h5>
 							<h5><a href="$">Another submenu</a></h5>
 						</div>
 					</li>
 					<li><a href="#">Research</a></li>
-					<li><a href="#">About me</li></a></li>
+					<li><a href="#">About me</a></li>
 				</ul>
 				
 				<h1><strong>{{ page.title }}</strong></h1>

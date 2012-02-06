@@ -5,7 +5,7 @@ aside: Shocking headline to generate interest!
 ---
 
 {% for post in paginator.posts %}
-<h1><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 <p><em>Posted on {{ post.date | date_to_long_string }}.</em></p>
 
 {{ post.content }}

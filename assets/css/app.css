@@ -22,7 +22,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Electrolize', sans-serif;
 }
 
 p {
@@ -34,7 +34,7 @@ p {
      background-image:url('../img/bg.jpg');
      background-attachment:fixed;
   }
-  div.row p, H1, H1, H3, H4, ul {
+  div.row p, H1, H2, H3, H4, ul, li, a {
     padding-left: 10px;
   }
   div.row {

@@ -4,7 +4,7 @@
   <title>crashsystems.net</title>
   <link href="http://crashsystems.net/"/>
   <link type="application/atom+xml" rel="self" href="http://coyled.com/atom.xml"/>
-  <updated>2012-02-04T14:34:20-08:00</updated>
+  <updated>2012-02-05T17:18:13-08:00</updated>
   <id>http://crashsystems.net/</id>
   <author>
     <name>Douglass Clem</name>
@@ -14,7 +14,7 @@
   <entry>
     <id>http://crashsystems.net/2011/11/10/test10</id>
     <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/10/test10.html"/>
-    <title>Yet another dummy blog post</title>
+    <title>Yet Another Dummy Blog Post</title>
     <updated>2011-11-10T00:00:00-08:00</updated>
     <author>
       <name>Douglass Clem</name>
