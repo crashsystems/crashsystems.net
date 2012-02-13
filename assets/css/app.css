@@ -44,6 +44,14 @@ p {
   }
 }
 
+#contentTab {
+  padding-top: 15px;
+}
+
+#sidebar p, H1, H2, H3, H4, ul, li, a {
+  padding-right: 5px;
+}
+
 #titleBar {
   background: #222222;
   border-bottom: solid 4px #00a5ff;

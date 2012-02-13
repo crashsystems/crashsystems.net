@@ -4,7 +4,7 @@
   <title>crashsystems.net</title>
   <link href="http://crashsystems.net/"/>
   <link type="application/atom+xml" rel="self" href="http://coyled.com/atom.xml"/>
-  <updated>2012-02-11T16:10:16-08:00</updated>
+  <updated>2012-02-12T16:57:04-08:00</updated>
   <id>http://crashsystems.net/</id>
   <author>
     <name>Douglass Clem</name>
@@ -13,7 +13,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/10/test10</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/10/test10.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/10/test10"/>
     <title>Yet Another Dummy Blog Post</title>
     <updated>2011-11-10T00:00:00-08:00</updated>
     <author>
@@ -31,7 +31,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/09/test9</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/09/test9.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/09/test9"/>
     <title>Test9</title>
     <updated>2011-11-09T00:00:00-08:00</updated>
     <author>
@@ -51,7 +51,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/08/test8</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/08/test8.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/08/test8"/>
     <title>Test8</title>
     <updated>2011-11-08T00:00:00-08:00</updated>
     <author>
@@ -71,7 +71,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/07/test7</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/07/test7.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/07/test7"/>
     <title>Test7</title>
     <updated>2011-11-07T00:00:00-08:00</updated>
     <author>
@@ -91,7 +91,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/06/test6</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/06/test6.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/06/test6"/>
     <title>Test6</title>
     <updated>2011-11-06T00:00:00-07:00</updated>
     <author>
@@ -111,7 +111,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/05/test5</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/05/test5.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/05/test5"/>
     <title>Test5</title>
     <updated>2011-11-05T00:00:00-07:00</updated>
     <author>
@@ -131,7 +131,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/04/test4</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/04/test4.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/04/test4"/>
     <title>Test4</title>
     <updated>2011-11-04T00:00:00-07:00</updated>
     <author>
@@ -151,7 +151,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/03/test3</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/03/test3.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/03/test3"/>
     <title>Test3</title>
     <updated>2011-11-03T00:00:00-07:00</updated>
     <author>
@@ -171,7 +171,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/02/test2</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/02/test2.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/02/test2"/>
     <title>Test2</title>
     <updated>2011-11-02T00:00:00-07:00</updated>
     <author>
@@ -191,7 +191,7 @@
   
   <entry>
     <id>http://crashsystems.net/2011/11/01/test1</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/01/test1.html"/>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/01/test1"/>
     <title>Test1</title>
     <updated>2011-11-01T00:00:00-07:00</updated>
     <author>

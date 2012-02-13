@@ -1,43 +1,43 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'>
     <url>
-        <loc>http://crashsystems.net/2011/11/01/test1.html</loc>
+        <loc>http://crashsystems.net/2011/11/01/test1</loc>
         <lastmod>2012-01-21T20:47:47-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/02/test2.html</loc>
+        <loc>http://crashsystems.net/2011/11/02/test2</loc>
         <lastmod>2012-01-21T20:47:53-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/03/test3.html</loc>
+        <loc>http://crashsystems.net/2011/11/03/test3</loc>
         <lastmod>2012-01-21T20:48:00-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/04/test4.html</loc>
+        <loc>http://crashsystems.net/2011/11/04/test4</loc>
         <lastmod>2012-01-21T20:48:06-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/05/test5.html</loc>
+        <loc>http://crashsystems.net/2011/11/05/test5</loc>
         <lastmod>2012-01-21T20:48:12-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/06/test6.html</loc>
+        <loc>http://crashsystems.net/2011/11/06/test6</loc>
         <lastmod>2012-01-21T20:48:19-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/07/test7.html</loc>
+        <loc>http://crashsystems.net/2011/11/07/test7</loc>
         <lastmod>2012-01-21T20:48:26-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/08/test8.html</loc>
+        <loc>http://crashsystems.net/2011/11/08/test8</loc>
         <lastmod>2012-01-21T20:48:32-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/09/test9.html</loc>
+        <loc>http://crashsystems.net/2011/11/09/test9</loc>
         <lastmod>2012-01-21T20:48:39-08:00</lastmod>
     </url>
     <url>
-        <loc>http://crashsystems.net/2011/11/10/test10.html</loc>
+        <loc>http://crashsystems.net/2011/11/10/test10</loc>
         <lastmod>2012-02-05T16:47:30-08:00</lastmod>
     </url>
     <url>
@@ -46,6 +46,6 @@
     </url>
     <url>
         <loc>http://crashsystems.net/</loc>
-        <lastmod>2012-02-05T16:47:30-08:00</lastmod>
+        <lastmod>2012-02-12T16:54:28-08:00</lastmod>
     </url>
 </urlset>

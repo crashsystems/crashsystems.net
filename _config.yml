@@ -1,4 +1,4 @@
 auto: true
-permalink: /:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title
 paginate: 5
 url: http://localhost:4000/
