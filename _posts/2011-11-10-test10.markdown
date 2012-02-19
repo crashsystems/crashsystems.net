@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Yet Another Dummy Blog Post
+aside: Hipster Lorum Ipsum FTW!
+tags:
+- hipsters
+- lorum ipsum
+- fubar
 ---
 
 Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.

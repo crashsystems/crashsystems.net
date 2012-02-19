@@ -5,6 +5,8 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
+	{% if page.aside %}<meta name="description" content="{{ page.aside }}" />{% endif %}
+	{% if page.tags %}<meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last != true %}, {% endif %}{% endfor %}" />{% endif %}
 	
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
