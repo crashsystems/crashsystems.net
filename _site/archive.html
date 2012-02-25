@@ -88,8 +88,37 @@
 </div>
 
 			<div class="four columns" id="sidebar">			
-<h4>A little blurb</h4>
-<p>Organic freegan messenger bag whatever marfa, ethical mixtape. Cliche tofu portland mlkshk, messenger bag terry richardson butcher vice. Skateboard artisan cosby sweater iphone, stumptown readymade cred. Gentrify stumptown freegan, carles cliche whatever lomo scenester aesthetic.</p>
+<p><input type="text" id="search" class="expand input-text" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" /><br>
+<a href="javascript:document.location='http://www.google.com/#q=site:crashsystems.net '+document.getElementById(&#x22;search&#x22;).value" id="btnSearch" class="small button radius">Search</a></p>
+
+<p><script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 5,
+  interval: 30000,
+  width: 'auto',
+  height: 255,
+  theme: {
+    shell: {
+      background: '#0011ff',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#0011ff'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    behavior: 'all'
+  }
+}).render().setUser('crashsystems').start();
+</script></p>
 </div>
 		</div>
 
