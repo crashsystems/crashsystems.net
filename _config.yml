@@ -3,3 +3,4 @@ permalink: /:year/:month/:day/:title
 paginate: 5
 url: http://localhost:4000/
 markdown: rdiscount
+exclude: README.markdown
