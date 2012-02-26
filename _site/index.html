@@ -70,7 +70,7 @@
 
 <p>The best way to describe <a href="http://jekyllrb.com/">Jekyll</a> is that it is like WordPress themes without the the rest of WordPress, and without having to bother with writing PHP. Templates are created with the <a href="http://liquidmarkup.org/">Liquid</a> templating language, and content is written with <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, a simple system for expressing content formatting in plaintext. Jekyll converts the Markdown content to HTML, runs the Liquid templates to assemble the site, and then outputs static HTML.</p>
 
-<p>This setup has several advantages, the first being security. Since I'm not running a database server or any server-side scripting language to run this site, there is much less that an attacker could attack. Secondly, no database queries means my site loads a lot faster. Theoretically, my site performance is only limited by the web server I'm running (more on that in a bit), disk I/O and connection throughput. Thirdly, my content is plain text stored in files, so I can edit it in any program I want, and I don't have to worry about database backups.</p>
+<p>This setup has several advantages, the first being security. Since I'm not running a database server or any server-side scripting language on this site, there is much less that an attacker could attack. Secondly, no database queries means my site loads a lot faster. Theoretically, my site performance is only limited by the web server I'm running (more on that in a bit), disk I/O and connection throughput. Thirdly, my content is plain text stored in files, so I can edit it in any program I want, and I don't have to worry about database backups.</p>
 
 <p>Comments don't work with static files, so I'm outsourcing comments to <a href="http://disqus.com/">Disqus</a>. Also, for site search I'm using a bit of JavaScript to redirect users to a Google search using the <em>site:</em> parameter.</p>
 
@@ -81,6 +81,10 @@
 <h3>Nginx</h3>
 
 <p>Apache is a very versatile web server, but it also seems somewhat slow and resource intensive. After I did some research, I found that the <a href="http://wiki.nginx.org/Main">Nginx</a> web server seems to be one of the fastest servers, especially for serving static content. The Nginx installation process was quite simple, and <a href="http://blog.martinfjordvald.com/2011/04/optimizing-nginx-for-high-traffic-loads/">this</a> guide was quite useful for performance tuning the server.</p>
+
+<hr />
+
+<p>The source code for my site can be found on <a href="https://github.com/crashsystems/crashsystems.net">GitHub</a>. Now that the site is set up, I plan on posting somewhat more frequently, about technology, information security, crypto and perhaps a bit of photography.</p>
 
 <hr />
 
