@@ -4,7 +4,7 @@
   <title>crashsystems.net</title>
   <link href="http://crashsystems.net/"/>
   <link type="application/atom+xml" rel="self" href="http://coyled.com/atom.xml"/>
-  <updated>2012-02-25T21:52:03-08:00</updated>
+  <updated>2012-02-26T03:07:59-08:00</updated>
   <id>http://crashsystems.net/</id>
   <author>
     <name>Douglass Clem</name>
@@ -12,210 +12,31 @@
 
   
   <entry>
-    <id>http://crashsystems.net/2011/11/10/test10</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/10/test10"/>
-    <title>Yet Another Dummy Blog Post</title>
-    <updated>2011-11-10T00:00:00-08:00</updated>
+    <id>http://crashsystems.net/2012/02/25/new_website</id>
+    <link type="text/html" rel="alternate" href="http://crashsystems.net/2012/02/25/new_website"/>
+    <title>Crashsystems.net 2.0</title>
+    <updated>2012-02-25T00:00:00-08:00</updated>
     <author>
       <name>Douglass Clem</name>
       <uri>http://crashsystems.net/</uri>
     </author>
-    <content type="html">&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
+    <content type="html">&lt;p&gt;As I've not updated this site in well over a year, and do not feel particularly attached to any of my old content, I recently decided to delete the old site and start from scratch. Also, I've gotten tired of always updating my WordPress installation. This, along with the fact that I'm sufficiently paranoid that I worry about having a database and server-side code running on my VPS, seemed like the perfect excuse to play with some new tools that I've been meaning to try. In this post I'll outline the tools I used to create crashsystems.net 2.0.&lt;/p&gt;
 
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
+&lt;h3&gt;Jekyll&lt;/h3&gt;
 
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
+&lt;p&gt;The best way to describe &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is that it is like WordPress themes without the the rest of WordPress, and without having to bother with writing PHP. Templates are created with the &lt;a href=&quot;http://liquidmarkup.org/&quot;&gt;Liquid&lt;/a&gt; templating language, and content is written with &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;, a simple system for expressing content formatting in plaintext. Jekyll converts the Markdown content to HTML, runs the Liquid templates to assemble the site, and then outputs static HTML.&lt;/p&gt;
 
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/09/test9</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/09/test9"/>
-    <title>Test9</title>
-    <updated>2011-11-09T00:00:00-08:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 9&lt;/h1&gt;
+&lt;p&gt;This setup has several advantages, the first being security. Since I'm not running a database server or any server-side scripting language to run this site, there is much less that an attacker could attack. Secondly, no database queries means my site loads a lot faster. Theoretically, my site performance is only limited by the web server I'm running (more on that in a bit), disk I/O and connection throughput. Thirdly, my content is plain text stored in files, so I can edit it in any program I want, and I don't have to worry about database backups.&lt;/p&gt;
 
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
+&lt;p&gt;Comments don't work with static files, so I'm outsourcing comments to &lt;a href=&quot;http://disqus.com/&quot;&gt;Disqus&lt;/a&gt;. Also, for site search I'm using a bit of JavaScript to redirect users to a Google search using the &lt;em&gt;site:&lt;/em&gt; parameter.&lt;/p&gt;
 
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
+&lt;h3&gt;Foundation&lt;/h3&gt;
 
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/2012/02/25/new_website/&quot;&gt;Foundation&lt;/a&gt; is a CSS framework for creating &lt;a href=&quot;http://www.alistapart.com/articles/responsive-web-design/&quot;&gt;responsive&lt;/a&gt; website layouts, meaning that one site template can automatically adjust to varying device form factors. Basically, I created this layout for desktops, and got a mobile site automatically, with no extra effort. In addition to simplifying the development of layouts, Foundation also abstracts many of the tedious aspects of using CSS. I'm far from being a graphics designer, but with Foundation I was able to quickly construct a site design that I don't think looks terrible.&lt;/p&gt;
 
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/08/test8</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/08/test8"/>
-    <title>Test8</title>
-    <updated>2011-11-08T00:00:00-08:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 8&lt;/h1&gt;
+&lt;h3&gt;Nginx&lt;/h3&gt;
 
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
-
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
-
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
-
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/07/test7</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/07/test7"/>
-    <title>Test7</title>
-    <updated>2011-11-07T00:00:00-08:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 7&lt;/h1&gt;
-
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
-
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
-
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
-
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/06/test6</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/06/test6"/>
-    <title>Test6</title>
-    <updated>2011-11-06T00:00:00-07:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 6&lt;/h1&gt;
-
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
-
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
-
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
-
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/05/test5</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/05/test5"/>
-    <title>Test5</title>
-    <updated>2011-11-05T00:00:00-07:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 5&lt;/h1&gt;
-
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
-
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
-
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
-
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/04/test4</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/04/test4"/>
-    <title>Test4</title>
-    <updated>2011-11-04T00:00:00-07:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 4&lt;/h1&gt;
-
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
-
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
-
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
-
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/03/test3</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/03/test3"/>
-    <title>Test3</title>
-    <updated>2011-11-03T00:00:00-07:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 3&lt;/h1&gt;
-
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
-
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
-
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
-
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/02/test2</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/02/test2"/>
-    <title>Test2</title>
-    <updated>2011-11-02T00:00:00-07:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 2&lt;/h1&gt;
-
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
-
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
-
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
-
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <id>http://crashsystems.net/2011/11/01/test1</id>
-    <link type="text/html" rel="alternate" href="http://crashsystems.net/2011/11/01/test1"/>
-    <title>Test1</title>
-    <updated>2011-11-01T00:00:00-07:00</updated>
-    <author>
-      <name>Douglass Clem</name>
-      <uri>http://crashsystems.net/</uri>
-    </author>
-    <content type="html">&lt;h1&gt;Post 1&lt;/h1&gt;
-
-&lt;p&gt;Farm-to-table raw denim blog, next level beard twee squid. Etsy keytar vinyl, marfa raw denim chambray mixtape. Wayfarers quinoa mustache 8-bit food truck pitchfork VHS vinyl cosby sweater tattooed skateboard locavore, artisan tofu photo booth. Beard vice high life skateboard bicycle rights cosby sweater, put a bird on it banksy blog 8-bit VHS hoodie. Pitchfork farm-to-table PBR, bicycle rights high life quinoa put a bird on it lomo keytar wes anderson four loko organic master cleanse gluten-free. Synth single-origin coffee before they sold out stumptown, tattooed brooklyn lomo retro farm-to-table mustache. Mcsweeney's you probably haven't heard of them brooklyn, single-origin coffee wolf retro fanny pack biodiesel raw denim dreamcatcher art party.&lt;/p&gt;
-
-&lt;p&gt;Shoreditch bicycle rights whatever cliche organic locavore. Skateboard hoodie +1 mustache portland, etsy mlkshk salvia fanny pack artisan. Mixtape terry richardson craft beer, wayfarers +1 mcsweeney's fixie sartorial williamsburg seitan. Tofu echo park tattooed butcher locavore. Put a bird on it freegan wayfarers, shoreditch brooklyn readymade blog artisan williamsburg twee wolf squid letterpress 8-bit. Banksy four loko tofu messenger bag carles shoreditch, beard retro. Keytar vice seitan beard mustache, letterpress skateboard.&lt;/p&gt;
-
-&lt;p&gt;Messenger bag banksy Austin, pitchfork chambray vegan banh mi seitan vice. Jean shorts portland stumptown, vinyl biodiesel cosby sweater 8-bit. Locavore stumptown +1, viral trust fund american apparel cliche gluten-free banh mi raw denim. Keytar 8-bit wolf keffiyeh, brooklyn single-origin coffee yr irony banksy. Messenger bag twee cosby sweater raw denim four loko artisan. Fixie art party thundercats, ethical messenger bag wes anderson lo-fi sartorial +1. Keffiyeh carles single-origin coffee, twee fixie chambray freegan.&lt;/p&gt;
-
-&lt;p&gt;Craft beer hoodie irony fanny pack put a bird on it gluten-free. Food truck tumblr sartorial letterpress. Vinyl craft beer yr cosby sweater. Locavore PBR viral stumptown tofu, skateboard blog. Keytar cliche retro put a bird on it, squid williamsburg mustache keffiyeh irony wayfarers. Artisan williamsburg VHS dreamcatcher organic, wayfarers keytar master cleanse banksy tattooed 3 wolf moon brunch portland salvia yr. Tattooed craft beer blog dreamcatcher sustainable stumptown.&lt;/p&gt;
+&lt;p&gt;Apache is a very versatile web server, but it also seems somewhat slow and resource intensive. After I did some research, I found that the &lt;a href=&quot;http://wiki.nginx.org/Main&quot;&gt;Nginx&lt;/a&gt; web server seems to be one of the fastest servers, especially for serving static content. The Nginx installation process was quite simple, and &lt;a href=&quot;http://blog.martinfjordvald.com/2011/04/optimizing-nginx-for-high-traffic-loads/&quot;&gt;this&lt;/a&gt; guide was quite useful for performance tuning the server.&lt;/p&gt;
 </content>
   </entry>
   

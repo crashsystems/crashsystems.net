@@ -10,16 +10,16 @@ new TWTR.Widget({
   rpp: 5,
   interval: 30000,
   width: 'auto',
-  height: 255,
+  height: 300,
   theme: {
     shell: {
-      background: '#0011ff',
+      background: '#000000',
       color: '#ffffff'
     },
     tweets: {
       background: '#ffffff',
       color: '#000000',
-      links: '#0011ff'
+      links: '#1100ff'
     }
   },
   features: {

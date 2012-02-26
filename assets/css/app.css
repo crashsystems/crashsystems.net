@@ -34,7 +34,7 @@ p {
      background-image:url('../img/bg.jpg');
      background-attachment:fixed;
   }
-  div.row p, H1, H2, H3, H4, ul, li, a {
+  div.row p, H1, H2, H3, H4, ul, li {
     padding-left: 10px;
   }
   div.row {
@@ -48,7 +48,7 @@ p {
   padding-top: 15px;
 }
 
-#sidebar p, H1, H2, H3, H4, ul, li, a {
+#sidebar p, H1, H2, H3, H4, ul, li {
   padding-right: 5px;
 }
 
