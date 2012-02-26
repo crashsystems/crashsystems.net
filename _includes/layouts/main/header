@@ -14,8 +14,8 @@
 					<h5><a href="$">Another submenu</a></h5>
 				</div>
 			</li>
-			<li><a href="#">Research</a></li>
-			<li><a href="#">About me</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="/about/">About me</a></li>
 		</ul>
 		
 		<h2><strong>{{ page.title }}</strong></h2>

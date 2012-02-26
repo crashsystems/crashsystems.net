@@ -1,6 +1,6 @@
 <div class="four columns" id="sidebar">			
 <p><input type="text" id="search" class="expand input-text" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" /><br>
-<a href="javascript:document.location='http://www.google.com/#q=site:crashsystems.net '+document.getElementById(&#x22;search&#x22;).value" id="btnSearch" class="small button radius">Search</a></p>
+<input type="submit" value="Search" onclick="javascript:document.location='http://www.google.com/#q=site:crashsystems.net '+document.getElementById(&#x22;search&#x22;).value" id="btnSearch" class="small button radius" /></p>
 
 <p><script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
