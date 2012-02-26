@@ -11,7 +11,7 @@
 	<script type="text/javascript">
 		var disqus_shortname = 'crashsystems';
 		var disqus_title = '{{ page.title }}';
-		var disqus_developer = 1;
+		var disqus_developer = 0;
 		var disqus_identifier = '{{ page.url }}';
 		/* * * DON'T EDIT BELOW THIS LINE * * */
 		(function() {
