@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
+	<link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
 	{% if page.aside %}<meta name="description" content="{{ page.aside }}" />{% endif %}
 	{% if page.tags %}<meta name="keywords" content="{% for tag in page.tags %}{{ tag }}{% if forloop.last != true %}, {% endif %}{% endfor %}" />{% endif %}
 	
