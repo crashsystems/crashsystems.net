@@ -8,7 +8,7 @@ I'm Douglass Clem, a geek with an intrest in information security and cryptograp
 ###Me On The Internet
 * [Twitter](http://twitter.com/crashsystems)
 * [Github](https://github.com/crashsystems)
-* [Google+](https://plus.google.com/113061983023159682683/posts)
+* <a rel="author" href="https://plus.google.com/113061983023159682683">Google+</a>
 * [Flickr](http://www.flickr.com/photos/crashsystems)
 
 ###Disclaimer

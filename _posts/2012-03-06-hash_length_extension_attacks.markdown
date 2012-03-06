@@ -12,7 +12,7 @@ tags:
 
 It seems that many penetration testers do not do much to test cryptographic vulnerabilities. I've always been interested in cryptography, so I've made it a goal of mine to understand how web application developers misuse crypto, and how to exploit those flaws.
 
-In January I had some time at work to do some independent research, so I decided to figure out how to perform hash length extension attacks against poorly implemented message authentication codes (MACs). I found a number of good research papers and blog posts discussing how these attacks work in a very general sense, but not much of anything that explained what was going on under the hood. In this post, I'll be explaining what is happening in a length extension attack.
+In January I had some time at work to do some independent research, so I decided to figure out how to perform hash length extension attacks against poorly implemented message authentication codes (MACs). I found several good [research papers](http://netifera.com/research/flickr_api_signature_forgery.pdf) and blog posts discussing how these attacks work in a very general sense, but not much that explained what was going on under the hood. In this post, I'll be explaining what is happening in a length extension attack.
 
 ###Message Authentication Codes 101
 Message authentication codes (MACs) are a way to verify the authenticity of a message. In the more naive implementation of a MAC, the server has a secret key that it concatenates with a message, and then hashes the combination with an algorithm such as MD5 or SHA1. Take for example, an application that is designed to give a user the ability to download specific files, so long as the user has authorization to do so. The site may create a MAC for the filename like this:
@@ -39,12 +39,13 @@ end</pre>
 With this code, the server should only call initiateDownload if the user has not tampered with the filename... or so the theory goes. In reality, this method of creating a MAC leaves the site vulnerable to an attack where an attacker can append their own content to the end of the file parameter.
 
 ###Length Extension Attacks, The Simple Explanation
-Cryptographic hash functions such as MD5, SHA1, SHA2 etc are based upon a construct known as Merkle–Damgård. An interesting issue that this type of hash function has is that if you have a message that was concatenated with some secret, the resulting hash of the concatenated value (the MAC), and know the length of the secret, you can add your own data to the message and calculate a value that will pass the MAC check, without knowing the secret.
+Cryptographic hash functions such as MD5, SHA1, SHA2 etc are based upon a construct known as [Merkle–Damgård](https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction). An interesting issue with this type of hash function is that if you have a message that was concatenated with some secret and the resulting hash of the concatenated value (the MAC), and you know the length of the secret, you can add your own data to the message and calculate a value that will pass the MAC check, without knowing the secret.
 
 Example:
 <pre class="code">message + padding + extension</pre>
 
 Continuing the example from above, an extension attack against the hypothetical file download MAC would look like this:
+
 <pre class="code hardWrap">http://example.com/download?file=report.pdf%80%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%A8/../../../../../../../etc/passwd&mac=ee40aa8ec0cfafb7e2ec4de20943b673968857a5</pre>
 
 ###Length Extensions In Depth
@@ -62,7 +63,7 @@ In SHA1, the algorithm being used in this example, a hash consists of a series o
 ####Calculating An Extension
 The first step in calculating an extension is creating a new MAC. To do this, we must hash the contents of what we are extending the hash with, '/../../../../../../../etc/passwd' in our example. However, when we perform this hash, we must override the initial registers with the MAC from the original message (SHA1(key+message)). You can think of this as making our SHA1 function start off at the state where the server's hash function left off.
 
-attacker's MAC = SHA1(extension + padding) <- but with overridden registers
+<pre class="code hardWrap">Attacker's MAC = SHA1(extension + padding) <- but with overridden registers</pre>
 
 For this attack to work, the extension must be in it's own block when it goes into the server's hash function. The second step is to calculate enough padding such that key + message + padding == some multiple of 512 bits. In this example, the key is 11 characters long. Therefore, the padded message would look like this:
 
@@ -80,7 +81,7 @@ For simplicity, in this example I revealed that the key length was 11 characters
 Continuing the example, lets say that our vulnerable website returns different errors (HTTP response codes, error messages in a response body, etc) when a MAC validation fails vs when validation succeeded but the file was not found. An attacker can then calculate multiple extensions, one for each possible key length, and send each to the server. When the server responds with an error indicating the file was not found, then a length extension vulnerability has been found, and the attacker is free to calculate new extensions aimed at gaining unauthorized access to sensitive files on the server.
 
 ####How To Defend Against This Attack
-The solution to this vulnerability is to use an algorithm known as HMAC. Instead of just hashing the key concatenated with the message, HMAC does something like this:
+The solution to this vulnerability is to use an algorithm known as [HMAC](https://en.wikipedia.org/wiki/HMAC). Instead of just hashing the key concatenated with the message, HMAC does something like this:
 
 MAC = hash(key + hash(key + message))
 

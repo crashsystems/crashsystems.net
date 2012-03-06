@@ -31,6 +31,7 @@ p {
 
 @media screen and (min-width: 981px) {
   body {
+     background-color: #bac1c7;
      background-image:url('../img/bg.jpg');
      background-attachment:fixed;
   }
@@ -38,7 +39,8 @@ p {
     padding-left: 10px;
   }
   pre.code {
-  	padding-left: 10px;
+  	margin-left: 10px;
+  	margin-bottom: 15px;
   }
   div.row {
   	-moz-box-shadow: -10px 10px 5px #888;
@@ -51,6 +53,10 @@ pre.code {
 	background-color: #E6E6E6;
 	color: #000000;
 	font-weight: bold;
+}
+
+pre.hardWrap {
+	word-wrap: break-word;
 }
 
 #contentTab {
