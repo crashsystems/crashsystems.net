@@ -1,6 +1,18 @@
 <div class="four columns" id="sidebar">			
-<p><input type="text" id="search" class="expand input-text" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" /><br>
-<input type="submit" value="Search" onclick="javascript:document.location='http://www.google.com/#q=site:crashsystems.net '+document.getElementById(&#x22;search&#x22;).value" id="btnSearch" class="small button radius" /></p>
+<p><div id="cse-search-form">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : 'en', style : google.loader.themes.V2_DEFAULT});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '014239524982095085491:ldevlztmg1q', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.enableSearchboxOnly("http://www.google.com/cse?cx=014239524982095085491:ldevlztmg1q");
+    customSearchControl.draw('cse-search-form', options);
+  }, true);
+</script>
+</p>
 
 <p><script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
